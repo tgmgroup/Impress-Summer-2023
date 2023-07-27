@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+
 * {
     box-sizing: border-box;
   }
@@ -12,6 +16,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    font-family: 'Klee One';
 
 }
 
@@ -40,9 +46,9 @@ body {
 
     display: grid;
     grid-template-columns: 9vw 3vw 88vw;
-    grid-template-rows: 8vw 37.25vw 11vw;
+    /* grid-template-rows: 8vw 37.25vw 11vw;*/
     grid-gap: 0vw;
-    grid-template-areas: "sidebar-left gap-left content-center" "sidebar-left gap-left content-center" "sidebar-left gap-left content-center";
+    grid-template-areas: "sidebar-left gap-left content-center";
   
     .content {
         grid-area: content-left;
@@ -235,7 +241,7 @@ h6 {
     border: 0vw;
     text-align: center;
     border-radius: .15vw;
-    margin: 1%;
+    margin: 
 
     align-items: center;
     justify-content: center;
@@ -252,7 +258,7 @@ h6 {
     border: 0vw;
     text-align: center;
     border-radius: .15vw;
-    margin: 1%;
+    margin: .1vw;
 
     align-items: center;
     justify-content: center;
@@ -264,9 +270,26 @@ h6 {
     padding: .1vw;
 }
 
-.content-left {
-    background-image: none;
+.hidden-text {
     box-shadow: -.20vw 0vw .2vw rgba(0, 0, 0, 0.19), 0 .06vw .20vw rgba(0, 0, 0, 0.23);
+    background-color: #FFFFFF;
+    color: black;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin: 1vw;
+    box-shadow: -.20vw 0vw .2vw rgba(0, 0, 0, 0.19), 0 .06vw .20vw rgba(0, 0, 0, 0.23);
+    border-radius: 1.5vw;
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 25%;
+    right: 15%;
+    z-index: 100;
+    text-align: center;
+    justify-content:center;
+    vertical-align: middle;
+    display: none;
+
 }
 
 .content-left-hidden {
@@ -330,43 +353,34 @@ h6 {
     width: 7vw;
 }
 
+
 .audio-button-image {
-    border-radius: .10vw;
+    align-items: left;
+    vertical-align: top;
+    object-fit: contain;
+}
+
+.audio-button-image {
+    border-radius: 1vw;
     box-shadow: 0vw .01vw .05vw rgba(0, 0, 0, 0.5);
-    max-height: 87%;
-    max-width: 87%;
+    max-height: 1.8vw;
+    max-width: 1.8vw;
     object-fit: contain;
 }
 
 .audio-button-image:hover {
     background-color: rgba(173, 195, 255, 0.884);
     transition: background-color 0.2s;
-    max-height: 88%;
-    max-width: 88%;
+    max-height: 2vw;
+    max-width: 2vw;
 }
 
-.audio-button-high {
-    position: absolute;
-    top: 10%;
-    left: 87%;
-    z-index: 9;
+.center-items {
+    background-color: transparent;
+    border: none;
+    height: 3vw;
+    width: 3vw;
 }
-
-.audio-button-mid {
-    position: absolute;
-    top: 45%;
-    left: 87%;
-    z-index: 9;
-}
-
-.audio-button-low {
-    position: absolute;
-    top: 80%;
-    left: 87%;
-    z-index: 9;
-}
-
-
 
 .hidden-fill-image {
     opacity: 0;
@@ -394,4 +408,3 @@ h6 {
     float: left;
     width: 25%;
 }
-

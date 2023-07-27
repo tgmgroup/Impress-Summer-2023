@@ -2,12 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Impress Magazine - Summer, 2023</title>
     <link rel="icon" type="image/x-icon" href="nav-images/logo.png">
     <link id="favicon" rel="shortcut icon" href="nav-images/logo.png">
+    <script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
     <div id="container">
@@ -64,11 +65,140 @@
         </div>
 
         <div class="item gap-left">
-
         </div>
 
         <div class="item content-center" style="background-image: url('Web/page03.jpg');">
-            <div class="left-content">
+            <div class="center-items">
+
+                <button class="center-items" type="button" onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')" style="position: absolute; top: .8vw; left:25vw;">
+                    <img id="play1-0" class="audio-button-image" src="nav-images/audio.png">
+                </button>
+    
+                <div class="items hidden-text" id="text1-0" onClick="this.style.display='none'">
+                    <h2>What are some of our best school memories? The 1st grade students at Isesaki’s First Junior High School wrote these for 6th graders in elementary school. After reading these, the 6th graders knew a little more about life in junior high school. 
+                    </h2>
+                </div>
+    
+                <audio id="audio1-0">
+                    <source src="./audio/audio1-0.mp3" type="audio/mp3">
+                </audio>
+
+
+                <button class="center-items" type="button" onClick="PlayAndShow('audio1-1', 'text1-1', 'play1-1')" style="position: absolute; top: 10vw; left:17vw;">
+                    <img id="play1-1" class="audio-button-image" src="nav-images/audio.png">
+                </button>
+
+                <div class="items hidden-text" id="text1-1" onClick="this.style.display='none'">
+                    <h3>My favorite event this year was our midterm and final exams. I did a lot of homework. We don't like homework, but we need to study every day... After the exams, I got my score. I was very worried, but I had a good score! After exams, I played a lot of video games. It was fun! Everyone, enjoy yourself now!
+                    </h3>
+                </div>
+
+                <audio id="audio1-1">
+                  <source src="./audio/audio1-1.mp3" type="audio/mp3">
+                </audio>
+
+
+                <button class="center-items" type="button" onClick="PlayAndShow('audio1-2', 'text1-2', 'play1-2')" style="position: absolute; top: 5.5vw;  left:36vw;">
+                    <img id="play1-2" class="audio-button-image" src="nav-images/audio.png">
+                </button>
+
+                <div class="items hidden-text" id="text1-2" onClick="this.style.display='none'">
+                    <h3>My favorite event this year was our entrance ceremony. It was in April. At first, I was a little bit nervous, but the time passed and I felt better. I was very nervous during my self-introduction. But it was good for me. It was very exciting.
+                    </h3>
+                </div>
+
+                <audio id="audio1-2">
+                  <source src="./audio/audio1-2.mp3" type="audio/mp3">
+                </audio>
+
+
+                <button class="center-items" type="button" onClick="PlayAndShow('audio1-3', 'text1-3', 'play1-3')" style="position: absolute; top: 6.5vw;  left:57.9vw;">
+                    <img id="play1-3" class="audio-button-image" src="nav-images/audio.png">
+                </button>
+
+                <div class="items hidden-text" id="text1-3" onClick="this.style.display='none'">
+                    <h3>My favorite event this year was our sports day. It was in September. We practiced for a relay. I had a good time. I was nervous and excited. Our class won first place! It was so great. I enjoyed the day very much.
+                    </h3>
+                </div>
+
+                <audio id="audio1-3">
+                  <source src="./audio/audio1-3.mp3" type="audio/mp3">
+                </audio>
+
+
+                <button class="center-items" type="button" onClick="PlayAndShow('audio1-4', 'text1-4', 'play1-4')" style="position: absolute; top: 6.8vw;  left:77.2vw;">
+                    <img id="play1-4" class="audio-button-image" src="nav-images/audio.png">
+                </button>
+
+                <div class="items hidden-text" id="text1-4" onClick="this.style.display='none'">
+                    <h3>My favorite event this year was our school trip. It was in August. We went to Lake Haruna. We had a walk rally and a cutter boat experience. There were quizzes everywhere on the walk rally. And the cutter boat experience was difficult. But it was very exciting! The school trip was tiring but fun. We enjoyed our school trip!
+                    </h3>
+                </div>
+
+                <audio id="audio1-4">
+                  <source src="audio/audio1-4.mp3" type="audio/mp3">
+                </audio>
+
+
+
+                <button class="center-items" type="button" onClick="PlayAndShow('audio1-5', 'text1-5', 'play1-5')" style="position: absolute; top: 31.7vw; left:19.6vw;">
+                    <img id="play1-5" class="audio-button-image" src="nav-images/audio.png">
+                </button>
+
+                <div class="items hidden-text" id="text1-5" onClick="this.style.display='none'">
+                    <h3>We started light art on January 20th. Light art is using light to create drawings and letters. We did the light art for the 3rd grade as a present for all the good things they helped us and taught us to do. The colors of the changing letters were very beautiful.
+                    </h3>
+                </div>
+
+                <audio id="audio1-5">
+                    <source src="audio/audio1-5.mp3" type="audio/mp3">
+                </audio>
+
+
+                <button class="center-items" type="button" onClick="PlayAndShow('audio1-6', 'text1-6', 'play1-6')" style="position: absolute; top: 30.6vw;  left:36.3vw;">
+                    <img id="play1-6" class="audio-button-image" src="nav-images/audio.png">
+                </button>
+
+                <div class="items hidden-text" id="text1-6" onClick="this.style.display='none'">
+                    <h3>My favorite event this year was our field trip. In December, we went around Isesaki's historical places and we saw parts of Japanese culture. At first, we went to the Aikawa Museum and next we went to Isesaki Shrine. It was so interesting. I enjoyed the day very much.
+                    </h3>
+                </div>
+
+                <audio id="audio1-6">
+                    <source src="audio/audio1-6.mp3" type="audio/mp3">
+                </audio>
+
+
+
+                <button class="center-items" type="button" onClick="PlayAndShow('audio1-7', 'text1-7', 'play1-7')" style="position: absolute; top: 30vw;  left:59.2vw;">
+                    <img id="play1-7" class="audio-button-image" src="nav-images/audio.png">
+                </button>
+
+                <div class="items hidden-text" id="text1-7" onClick="this.style.display='none'">
+                    <h3>My favorite event this year was our light art. The first graders gathered in the gym and worked together to make pictures. I really wanted to do it in front of the third grade. When the pictures were over, I felt a great sense of accomplishment.
+                    </h3>
+                </div>
+
+                <audio id="audio1-7">
+                  <source src="./audio/audio1-7.mp3" type="audio/mp3">
+                </audio>
+
+
+                <button class="center-items" type="button" onClick="PlayAndShow('audio1-8', 'text1-8', 'play1-8')" style="position: absolute; top: 31.3vw;  left:77vw;">
+                    <img id="play1-8" class="audio-button-image" src="nav-images/audio.png">
+                </button>
+
+                <div class="items hidden-text" id="text1-8" onClick="this.style.display='none'">
+                    <h3 style="font-size: 2.3vw;">My favorite things this year were our classes. Social studies was really interesting because the teacher gave interesting classes. Japanese was fun because I read stories in depth. I can write many sentences in English. Thanks to the teachers, I was able to get good marks on tests. I am grateful to the teachers who taught me the lessons.
+                    </h3>
+                </div>
+
+                <audio id="audio1-8">
+                  <source src="./audio/audio1-8.mp3" type="audio/mp3">
+                </audio>
+
+
+
             </div>
         </div>
 
