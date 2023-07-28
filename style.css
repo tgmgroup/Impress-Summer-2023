@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+/* Paste the @import rule for the Google Font here */
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
 
 
 /* Media query for landscape orientation */
@@ -43,7 +43,7 @@ body {
     align-items: center;
     height: 100vh;
 
-    font-family: 'Klee One';
+    font-family: 'Klee One', cursive;
 
 }
 
@@ -331,6 +331,8 @@ h6 {
     color: #f8f6ff;
     border-radius: .15vw;
 
+    font-family: 'Klee One', cursive;
+
     object-fit: contain;
 
     display: inline-flex;
@@ -356,6 +358,8 @@ h6 {
     color: #f8f6ff;
 
     border-radius: .15vw;
+
+    font-family: 'Klee One', cursive;
 
     object-fit: contain;
 

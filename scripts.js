@@ -7,7 +7,13 @@ function PlayAndShow(audioSound, textDiv, audioImage) {
         myAudio.play();
         myText.style.display = "flex";
         myButton.src= "./nav-images/stop-g55029e04a_1280.png";
-        myAudio.onended = ResetPlayAndShow(myAudio, myText, myButton);
+        // myAudio.onended = ResetPlayAndShow(myAudio, myText, myButton);
+        myAudio.addEventListener('ended', function() {
+            myAudio.pause();
+            myAudio.currentTime = 0;
+            myText.style.display = "none";
+            myButton.src= "nav-images/play-g79150a13d_1280.png";
+          });
      }
     else {
         myAudio.pause();
@@ -15,8 +21,10 @@ function PlayAndShow(audioSound, textDiv, audioImage) {
         myText.style.display = "none";
         myButton.src= "nav-images/play-g79150a13d_1280.png";
   }
-  
+
 } 
+
+
 
 function HideDiv(textDiv) {
     var myText = document.getElementById(textDiv);
@@ -31,7 +39,7 @@ function ResetPlayAndShow(audioSound, textDiv, audioImage) {
     myAudio.pause();
     myAudio.currentTime = 0;
     myText.style.display = "none";
-    myButton.src= "nav-images/audio.png";
+    myButton.src= "nav-images/play-g79150a13d_1280.png";
 
 }
 
