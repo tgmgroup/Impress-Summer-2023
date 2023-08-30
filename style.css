@@ -14,7 +14,7 @@
 /* Apply these styles when the screen width is less than the height (portrait mode) */
 @media screen and (orientation: portrait) {
     body {
-        display: none; /* Hide the entire body when in portrait mode */
+        display: none; /* Hide the entire body when in portraxit mode */
     }
 }
 
@@ -72,16 +72,9 @@ body {
 
     display: grid;
     grid-template-columns: 9vw 3vw 88vw;
-    /* grid-template-rows: 8vw 37.25vw 11vw;*/
+
     grid-gap: 0vw;
     grid-template-areas: "sidebar-left gap-left content-center";
-  
-    .content {
-        grid-area: content-left;
-        z-index: 2;
-        background-color: transparent;
-        opacity: 0;
-    }
 
     .gap-left {
         grid-area: gap-left;
@@ -177,7 +170,6 @@ body {
         width: 4vw;
     }
 
-
     .left-content {
         padding: 0;
         margin: 0;
@@ -185,6 +177,7 @@ body {
         width: inherit;
         border: 0vw;
     }
+
     .left-content-image {
         height: inherit;
         width: inherit;
@@ -221,7 +214,7 @@ h3 {
 }
 
 h4 {
-    font-size: 2 vw;
+    font-size: 2vw;
     font-weight: bold;
 }
 
@@ -241,11 +234,12 @@ h6 {
     background-color: #000000;
     /* background-image: linear-gradient(130deg, #f4f3f7 0%, #1EAAFC 85%, #3EDFD7 100%); */
     /* background-image: linear-gradient(130deg, #bcb8c4 0%, #9da5c9 55%, #bcb8c4 100%); */
-    box-shadow: 0vw;
+    box-shadow: none;
     color: #ffffff;
     border-radius: 0vw;
     border: 0vw solid #171717;
-    display: flex;
+
+    display: inline-grid;
     justify-content: center;
     align-items: center;
     font-size: 1.1vw;
@@ -260,7 +254,7 @@ h6 {
     border: 0vw;
     text-align: center;
     border-radius: .15vw;
-    margin: 
+    margin: .1vw;
 
     align-items: center;
     justify-content: center;
@@ -376,13 +370,6 @@ h6 {
     width: 7vw;
 }
 
-
-.audio-button-image {
-    align-items: left;
-    vertical-align: top;
-    object-fit: contain;
-}
-
 .audio-button-image {
     border-radius: 1vw;
     box-shadow: 0vw .01vw .05vw rgba(0, 0, 0, 0.5);
@@ -430,4 +417,84 @@ h6 {
 .column {
     float: left;
     width: 25%;
+}
+
+
+
+
+
+.header-left {
+    height: 6vw;
+    width: 6vw;
+    z-index: 3;
+    margin: .5vw;
+    background: none;
+}
+
+.left-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    grid-gap: .5vw;
+    padding: 0vw;
+    margin: .5vw;
+    margin-bottom: 1vw;
+    height: 37.25vw;
+}
+
+.footer-left-top {
+    height: 3vw;
+    width: 6vw;
+    z-index: 4;
+    margin: .5vw;
+    background: none;
+}
+.footer-left-bottom {
+    height: 3vw;
+    width: 6vw;
+    z-index: 4;
+    margin: .5vw;
+    background: none;
+}
+
+.left-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left-menu-image {
+    border-radius: .10vw;
+    box-shadow: 0vw .1vw .5vw rgba(0, 0, 0, 0.5);
+    height: 3vw;
+    width: 3vw;
+    background-color:#e6defd;
+    object-fit: contain;
+}
+
+.left-menu-image:hover {
+    background-color: rgba(173, 195, 255, 0.884);
+    transition: background-color 0.2s;
+    height: 4vw;
+    width: 4vw;
+}
+
+.left-content {
+    padding: 0;
+    margin: 0;
+    height: inherit;
+    width: inherit;
+    border: 0vw;
+}
+
+.left-content-image {
+    height: inherit;
+    width: inherit;
+    padding: 0;
+    margin: 0;
+    border: 0vw;
+    object-fit:contain;
+    display: block;
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Impress Magazine - Summer, 2023</title>
+    <link rel="icon" type="image/x-icon" href="nav-images/logo.png">
+    <link id="favicon" rel="shortcut icon" href="nav-images/logo.png">
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+
+            <iframe src="front.html" style="border:0px #ffffff none;" name="Impress" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen>
+            </iframe>
+
+
+
+
+
+    <!-- Include an audio element to load the sound -->
+    <audio id="hover-sound">
+        <source src="./audio/computerwav-14702A.mp3" type="audio/mpeg">
+        <!-- Add more source elements for different audio formats if needed -->
+    </audio>
+
+    <!-- Include an audio element to load the sound -->
+    <audio id="click-sound">
+        <source src="./audio/computerwav-14702B.mp3" type="audio/mpeg">
+        <!-- Add more source elements for different audio formats if needed -->
+    </audio>
+
+    <script>
+        // Call the function after the page has loaded, passing the class name "clickable"
+        document.addEventListener("DOMContentLoaded", function() {
+            playHoverSoundOnClass("clickable");
+            playClickSoundOnClass("clickable");
+            
+            // Use JavaScript to fetch and insert the menu HTML into the placeholder div.
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('menu-placeholder').innerHTML = data;
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
+
+
+
+

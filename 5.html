@@ -68,7 +68,7 @@
 
         </div>
 
-        <div class="item content-center" style="background-image: url('Web/page07.jpg');">
+        <div class="item content-center" style="background-image: url('Web/page07.jpg');background-size: contain; background-position: center; background-attachment: local; background-repeat: no-repeat; background-color: #000000;">
             <div class="center-items">
 
                 <button class="center-items " type="button" onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')" style="position: absolute; top: .8vw; left:25vw;">
@@ -130,11 +130,11 @@
             playClickSoundOnClass("clickable");
             
             // Use JavaScript to fetch and insert the menu HTML into the placeholder div.
-            fetch('menu.html')
+            /*fetch('menu.html')
                 .then(response => response.text())
                 .then(data => {
                 document.getElementById('menu-placeholder').innerHTML = data;
-            });
+            });*/
 
         });
 

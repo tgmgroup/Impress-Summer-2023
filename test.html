@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scaling to 1080p Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Set your desired background color here */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 56.25vw;
+            width: 100vh;
+            font-size: 2.5vw; /* Example: set the font size relative to the viewport width */
+            background-image: url('./Web/page01.jpg');
+            background-size: contain; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-color: #000000;
+        }
+
+        #content {
+            width: 100%;
+            max-width: 1920px;
+            height: 1080px; /* 1080p height */
+            max-height: 100%;
+            /* Add your website content styles here */
+        }
+
+
+
+
+
+
+
+        #container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 56.25vw; /* 1080p aspect ratio: 1080 / 1920 * 100 = 56.25 */
+    max-height: 56.25vw; /* Set maximum height to avoid overflowing the viewport */
+    max-width: 100vw;
+    margin: 0.2vw;
+    overflow: hidden;
+    
+    /* Add your website content styles here */
+    background-image: url('./Web/page01.jpg');
+    background-size: contain; 
+    background-attachment: fixed;
+    background-position: right; 
+    background-repeat: no-repeat;
+    background-color: #000000;
+
+    display: grid;
+    grid-template-columns: 9vw 3vw 88vw;
+    /* grid-template-rows: 8vw 37.25vw 11vw;*/
+    grid-gap: 0vw;
+    grid-template-areas: "sidebar-left gap-left content-center";
+  
+    .content {
+        grid-area: content-left;
+        z-index: 2;
+        background-color: transparent;
+        opacity: 0;
+    }
+
+    .gap-left {
+        grid-area: gap-left;
+        height: 100%;
+        background-color: #000000;
+        z-index: 0;
+    }
+
+    .sidebar-left {
+        grid-area: sidebar-left;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 2;
+        border-radius: .15vw;
+        box-shadow: 0 .10vw .20vw rgba(0, 0, 0, 0.836), 0 .6vw .6vw rgba(0, 0, 0, 0.23);
+        box-shadow: 0vw .01vw .05vw rgba(0, 0, 0, 0.5);
+    }
+
+    .content-center {
+        grid-area: content-center;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        grid-gap: 0vw;
+        border: 0vw;
+        z-index: 2;
+        background-image: url('./Web/page01.jpg');
+        background-size: contain; 
+        background-position: center; 
+        background-repeat: no-repeat;
+    }
+
+
+    .header-left {
+        height: 6vw;
+        width: 6vw;
+        z-index: 3;
+        margin: .5vw;
+        background: none;
+    }
+
+    .left-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        grid-gap: .5vw;
+        padding: 0vw;
+        margin: .5vw;
+        margin-bottom: 1vw;
+        height: 37.25vw;
+    }
+
+    .footer-left-top {
+        height: 3vw;
+        width: 6vw;
+        z-index: 4;
+        margin: .5vw;
+        background: none;
+    }
+    .footer-left-bottom {
+        height: 3vw;
+        width: 6vw;
+        z-index: 4;
+        margin: .5vw;
+        background: none;
+    }
+
+    .left-menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .left-menu-image {
+        border-radius: .10vw;
+        box-shadow: 0vw .1vw .5vw rgba(0, 0, 0, 0.5);
+        height: 3vw;
+        width: 3vw;
+        background-color:#e6defd;
+        object-fit: contain;
+    }
+
+    .left-menu-image:hover {
+        background-color: rgba(173, 195, 255, 0.884);
+        transition: background-color 0.2s;
+        height: 4vw;
+        width: 4vw;
+    }
+
+
+    .left-content {
+        padding: 0;
+        margin: 0;
+        height: inherit;
+        width: inherit;
+        border: 0vw;
+    }
+    .left-content-image {
+        height: inherit;
+        width: inherit;
+        padding: 0;
+        margin: 0;
+        border: 0vw;
+        object-fit:contain;
+        display: block;
+    }
+
+}
+
+
+
+/* Add your additional styles with relative units */
+p {
+    font-size: 2vw; /* Example: set the font size relative to the viewport width */
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 3vw; /* Example: set the font size relative to the viewport width */
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2.7vw;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+
+
+.item {
+    background-color: #000000;
+    /* background-image: linear-gradient(130deg, #f4f3f7 0%, #1EAAFC 85%, #3EDFD7 100%); */
+    /* background-image: linear-gradient(130deg, #bcb8c4 0%, #9da5c9 55%, #bcb8c4 100%); */
+    box-shadow: 0vw;
+    color: #ffffff;
+    border-radius: 0vw;
+    border: 0vw solid #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+.header {
+    background-color: #f1faff;
+    background-image: linear-gradient(160deg, #eeedf1 0%, #8a8ce6 127%);
+    box-shadow: 0 .10vw .20vw rgba(0, 0, 0, 0.836), 0 .6vw .6vw rgba(0, 0, 0, 0.23);
+    box-shadow: 0vw .01vw .05vw rgba(0, 0, 0, 0.5);
+    border: 0vw;
+    text-align: center;
+    border-radius: .15vw;
+    margin: .1vw;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.footer {
+    background-color: #f1faff;
+    background-image: linear-gradient(160deg, #eeedf1 0%, #8a8ce6 127%);
+    box-shadow: 0 .10vw .20vw rgba(0, 0, 0, 0.836), 0 .6vw .6vw rgba(0, 0, 0, 0.23);
+    box-shadow: 0vw .01vw .05vw rgba(0, 0, 0, 0.5);
+    border: 0vw;
+    text-align: center;
+    border-radius: .15vw;
+    margin: .1vw;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar {
+    background-image: linear-gradient(203deg, #4b73b5 0%, #0b004f 90%);
+    box-shadow: 0 .1vw .2vw rgba(0, 0, 0, 0.836), 0 .06vw .06vw rgba(0, 0, 0, 0.23);
+    padding: .1vw;
+}
+
+.hidden-text {
+    box-shadow: -.20vw 0vw .2vw rgba(0, 0, 0, 0.19), 0 .06vw .20vw rgba(0, 0, 0, 0.23);
+    background-color: #FFFFFF;
+    color: black;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin: 1vw;
+    box-shadow: -.20vw 0vw .2vw rgba(0, 0, 0, 0.19), 0 .06vw .20vw rgba(0, 0, 0, 0.23);
+    border-radius: 1.5vw;
+    position: absolute;
+    top: 20%;
+    bottom: 15%;
+    left: 25%;
+    right: 15%;
+    z-index: 100;
+    text-align: center;
+    justify-content:center;
+    vertical-align: middle;
+    display: none;
+
+}
+
+.content-left-hidden {
+    background-color: transparent;
+    background-image: linear-gradient(130deg, #f4f3f7 0%, #1EAAFC 85%, #3EDFD7 100%);
+    opacity: 0;
+    box-shadow: -.20vw 0vw .2vw rgba(0, 0, 0, 0.19), 0 .06vw .20vw rgba(0, 0, 0, 0.23);
+}
+
+
+
+.menu-button {
+    height: 6.2vw;
+    width: 6.2vw;
+
+    background-image: linear-gradient(160deg, #f0eff3 0%, #0a0135 127%);
+    border-radius: .10vw;
+    box-shadow: 0vw .1vw .5vw rgba(0, 0, 0, 0.5);
+    border: 0vw;
+    color: #f8f6ff;
+    border-radius: .15vw;
+
+    font-family: 'Klee One', cursive;
+
+    object-fit: contain;
+
+    display: inline-flex;
+    justify-content: center; /* center the content horizontally */
+    align-items: center; /* center the content vertically */
+}
+
+.menu-button:hover {
+    background-color: rgba(6, 37, 124, 0.884);
+    transition: background-color 0.2s;
+    height: 7vw;
+    width: 7vw;
+}
+
+.menu-button-small {
+    height: 3.1vw;
+    width: 6.2vw;
+
+    background-image: linear-gradient(160deg, #f0eff3 0%, #0a0135 127%);
+    border-radius: .10vw;
+    box-shadow: 0vw .1vw .5vw rgba(0, 0, 0, 0.5);
+    border: 0vw;
+    color: #f8f6ff;
+
+    border-radius: .15vw;
+
+    font-family: 'Klee One', cursive;
+
+    object-fit: contain;
+
+    display: inline-flex;
+    justify-content: center; /* center the content horizontally */
+    align-items: center; /* center the content vertically */
+
+}
+
+.menu-button-small:hover {
+    background-color: rgba(6, 37, 124, 0.884);
+    transition: background-color 0.2s;
+    height: 4vw;
+    width: 7vw;
+}
+
+
+.audio-button-image {
+    align-items: left;
+    vertical-align: top;
+    object-fit: contain;
+}
+
+.audio-button-image {
+    border-radius: 1vw;
+    box-shadow: 0vw .01vw .05vw rgba(0, 0, 0, 0.5);
+    max-height: 1.8vw;
+    max-width: 1.8vw;
+    object-fit: contain;
+}
+
+.audio-button-image:hover {
+    background-color: rgba(173, 195, 255, 0.884);
+    transition: background-color 0.2s;
+    max-height: 2vw;
+    max-width: 2vw;
+}
+
+.center-items {
+    background-color: transparent;
+    border: none;
+    height: 3vw;
+    width: 3vw;
+}
+
+.hidden-fill-image {
+    opacity: 0;
+    height: inherit;
+    width: inherit;
+    padding: 0;
+    margin: 0;
+    object-fit: fill;
+    display: block;
+    border: 0vw;
+    border-radius: 0vw;
+}
+
+.row>.column {
+    padding: 0 .8vw;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <!-- Your website content goes here -->
+
+        <div class="item sidebar sidebar-left">
+            <div class="item header header-left">
+                <form>
+                    <button class="menu-button clickable" type="submit" formaction="index.html">
+                        <h6>Impress<br>Magazine</h6>
+                    </button>
+                </form>
+            </div>
+            <div class="left-menu">
+                <a href="index.html" target="_self">
+                    <div class="left-menu-button"><img class="left-menu-image clickable" src="nav-images/front.png"></a>
+                </div>
+                <a href="1.html" target="_self">
+                    <div class="left-menu-button"><img class="left-menu-image clickable" src="nav-images/1.png"></a>
+                </div>
+                <a href="1.html" target="_self">
+                    <div class="left-menu-button"><img class="left-menu-image clickable" src="nav-images/2.png"></a>
+                </div>
+                <a href="3.html" target="_self">
+                    <div class="left-menu-button"><img class="left-menu-image clickable" src="nav-images/3.png"></a>
+                </div>
+                <a href="3.html" target="_self">
+                    <div class="left-menu-button"><img class="left-menu-image clickable" src="nav-images/4.png"></a>
+                </div>
+                <a href="5.html" target="_self">
+                    <div class="left-menu-button"><img class="left-menu-image clickable" src="nav-images/5.png"></a>
+                </div>
+                <a href="5.html" target="_self">
+                    <div class="left-menu-button"><img class="left-menu-image clickable" src="nav-images/6.png"></a>
+                </div>
+                <a href="cover.html" target="_self">
+                    <div class="left-menu-button"><img class="left-menu-image clickable" src="nav-images/back.png"></a>
+                </div>
+            </div>
+            <div class="item footer footer-left-top">
+                <form>
+                    <button class="menu-button-small clickable" type="submit" formaction="cover.html">
+                        <h6>Previous</h6>
+                    </button>
+                </form>
+            </div>
+            <div class="item footer footer-left-bottom">
+                <form>
+                    <button class="menu-button-small clickable" type="submit" formaction="1.html">
+                        <h6>Next</h6>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="item gap-left">
+            
+        </div>
+
+        <div class="item content-center" style="background-image: url('Web/page01.jpg'); background-size: contain; background-position: center; background-attachment: fixed; background-repeat: no-repeat; background-color: #000000;">
+            <div class="left-content">
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
