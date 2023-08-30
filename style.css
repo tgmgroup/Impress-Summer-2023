@@ -1,6 +1,9 @@
 /* Paste the @import rule for the Google Font here */
 @import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
-
+@font-face {
+  font-family: 'Klee One'; /* This is the name you'll use to refer to the font */
+  src: url('font/kleeone_regular.ttf') format('truetype'); /* Adjust the path and format as needed */
+}
 
 /* Media query for landscape orientation */
 @media screen and (orientation: landscape) {
