@@ -396,8 +396,8 @@ h6 {
 .left-menu-image {
     border-radius: .10vw;
     box-shadow: 0vw .1vw .5vw rgba(0, 0, 0, 0.5);
-    height: 3vw;
-    width: 3vw;
+    height: 2.7vw;
+    width: 2.7vw;
     background-color:#e6defd;
     object-fit: contain;
 }
@@ -405,8 +405,8 @@ h6 {
 .left-menu-image:hover {
     background-color: rgba(173, 195, 255, 0.884);
     transition: background-color 0.2s;
-    height: 4vw;
-    width: 4vw;
+    height: 3.5vw;
+    width: 3.5vw;
 }
 
 .left-content {
@@ -425,4 +425,10 @@ h6 {
     border: 0vw;
     object-fit:contain;
     display: block;
+}
+
+
+.credit-text {
+    font-size: 1vw;
+    color: white;
 }
